@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/angular.min%20(1)1.7.9.js"></script>
+</head>
+<body ng-app="spApp">
+<h1>ng-include directive</h1>
+<div ng-controller="spCotroller" class="container">
+    <div ng-include="'mainContent.html'"></div>
+    <div ng-include="'sideBar.html'"></div>
+</div>
+</body>
+<script>
+    var MyApp=angular.module('spApp', []);
+    MyApp.controller("spController", function ($scope){
+        $scope.quantity=1;
+        $scope.price=9.99;
+    });
+</script>
+</html>
